@@ -7,6 +7,16 @@ CREATE TABLE users(
                    password varchar(255)null,
                    primary key(id)
                    );
+
+//CONNECTION
+
+$hostname = "localhost:8080";
+$user = "root";
+$password = "";
+$dbname = "database_name";
+$conn = new mysqli($hostname,$username,$password,$dbname);
+ if($conn) : " Connected !";
+
 //SQL QUERY
 
 $check_login = "SELECT email,password 
